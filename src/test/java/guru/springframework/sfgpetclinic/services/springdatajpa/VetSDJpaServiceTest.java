@@ -7,7 +7,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
@@ -23,6 +22,6 @@ class VetSDJpaServiceTest {
     void deleteById() {
         service.deleteById(1L);
 
-        verify(vetRepository, atLeastOnce()).deleteById(1L);
+        verify(vetRepository).deleteById(1L);
     }
 }
